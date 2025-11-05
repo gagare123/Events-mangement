@@ -1,18 +1,17 @@
-// test-db.js
-require("dotenv").config(); // loads .env or .env.local
-const mongoose = require("mongoose");
-
-const uri = process.env.MONGODB_URI;
+import mongoose from "mongoose";
 
 async function testConnection() {
-  try {
-    if (!uri) throw new Error("MONGODB_URI not found in environment variables");
+  const uri = process.env.MONGODB_URI || "your_connection_string_here";
 
-    console.log("🔍 Connecting to MongoDB...");
+  try {
     await mongoose.connect(uri);
     console.log("✅ Connected successfully to MongoDB!");
   } catch (err) {
-    console.error("❌ MongoDB connection error:", err.message);
+    if (err instanceof Error) {
+      console.error("❌ MongoDB connection error:", err.message);
+    } else {
+      console.error("❌ MongoDB connection error:", err);
+    }
   } finally {
     await mongoose.disconnect();
   }
