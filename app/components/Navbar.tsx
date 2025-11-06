@@ -80,6 +80,8 @@ export default function Navbar() {
                     </span>
                   )}
                 </div>
+                <a href="/" className="text-blue-600 hover:underline">Home</a>
+
                 <button
                   onClick={handleSignOut}
                   className="flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"

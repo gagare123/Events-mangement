@@ -95,11 +95,11 @@ export default function EventsPage() {
       </div>
     );
   }
-
+//bg-gradient-to-r from-green-600 to-pink-600
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-green-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-pink-600 text-white py-16">
+      <div className="bg-green-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Discover Events</h1>
           <p className="text-xl text-purple-100">

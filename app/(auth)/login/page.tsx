@@ -43,9 +43,9 @@ export default function LoginPage() {
       setLoading(false);
     }
   };
-
+//bg-gradient-to-br from-yellow-900 via-green-700 to-pink-500
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-900 via-green-700 to-pink-500 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-green-100  flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
@@ -68,7 +68,7 @@ export default function LoginPage() {
               Email Address
             </label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-900" size={20} />
               <input
                 type="email"
                 value={formData.email}

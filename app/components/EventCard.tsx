@@ -45,17 +45,17 @@ export default function EventCard({ event }: { event: any }) {
   }
 
   return (
-    <div className="border rounded-lg p-4 shadow-sm bg-white mb-4">
-      <h2 className="text-lg font-semibold">{event.title}</h2>
+    <div className="border rounded-lg p-4 shadow-sm bg-green-50 mb-4">
+      <h2 className="text-lg text-black font-semibold">{event.title}</h2>
       <p className="text-gray-600 mt-1">{event.description}</p>
-      <p className="mt-2">
-        <strong>Date:</strong> {new Date(event.date).toLocaleDateString()}
+      <p className="mt-2 text-black">
+        <strong className="text-black">Date:</strong> {new Date(event.date).toLocaleDateString()}
       </p>
-      <p>
-        <strong>Time:</strong> {event.time}
+      <p className="text-black">
+        <strong className="text-black">Time:</strong> {event.time}
       </p>
-      <p>
-        <strong>Location:</strong> {event.location}
+      <p className="text-black">
+        <strong className="text-black">Location:</strong> {event.location}
       </p>
       <p className="mt-2 font-medium text-green-600">
         ₦{event.price?.toLocaleString()}
@@ -75,14 +75,14 @@ export default function EventCard({ event }: { event: any }) {
             placeholder="Enter your phone number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full text-black border px-3 py-2 rounded"
           />
           <input
             type="number"
             min={1}
             value={tickets}
             onChange={(e) => setTickets(parseInt(e.target.value))}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full text-black border px-3 py-2 rounded"
           />
           <div className="flex gap-2">
             <button

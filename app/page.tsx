@@ -10,15 +10,15 @@ export default function HomePage() {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  useEffect(() => {
-    if (status === 'authenticated') {
-      if (session?.user?.role === 'admin') {
-        router.push('/admin/dashboard');
-      } else {
-        router.push('/dashboard');
-      }
-    }
-  }, [status, session, router]);
+  // useEffect(() => {
+  //   if (status === 'authenticated') {
+  //     if (session?.user?.role === 'admin') {
+  //       router.push('/admin/dashboard');
+  //     } else {
+  //       router.push('/dashboard');
+  //     }
+  //   }
+  // }, [status, session, router]);
 
   if (status === 'loading') {
     return (
@@ -27,18 +27,18 @@ export default function HomePage() {
       </div>
     );
   }
-
+//bg-gradient-to-br from-pink-600 via-green-600 to-pink-400
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-600 via-green-600 to-pink-400">
+    <div className="min-h-screen bg-green-50 ">
       <div className="max-w-7xl mx-auto px-4 py-20">
-        <div className="text-center text-white">
+        <div className="text-center text-black">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-pink bg-opacity-20 rounded-full mb-6">
-            <Calendar className="text-white" size={48} />
+            <Calendar className="text-black" size={48} />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Welcome to Gagare EventHub
           </h1>
-          <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-green-500 mb-8 max-w-2xl mx-auto">
             Discover, register, and manage amazing events all in one place.
             Join thousands of event enthusiasts today!
           </p>
@@ -64,7 +64,7 @@ export default function HomePage() {
               <Calendar size={32} />
             </div>
             <h3 className="text-2xl font-bold mb-2">Browse Events</h3>
-            <p className="text-pink-500">
+            <p className="text-black">
               Discover a wide variety of events from technology conferences to entertainment shows.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function HomePage() {
               <Ticket size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2">Easy Registration</h3>
-            <p className="text-pink-500">
+            <p className="text-green-500">
               Register for events in just a few clicks. Manage all your registrations in one place.
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function HomePage() {
               <Users size={32} />
             </div>
             <h3 className="text-xl font-bold mb-2">For Organizers</h3>
-            <p className="text-pink-500">
+            <p className="text-blue-500">
               Create and manage events with powerful admin tools. Track registrations and revenue.
             </p>
           </div>
@@ -112,10 +112,10 @@ export default function HomePage() {
         </div>
 
         <div className="mt-20 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-black mb-4">
             Ready to get started?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-blue-500 mb-8">
             Join Gagare EventHub today and never miss an amazing event again.
           </p>
           <Link
