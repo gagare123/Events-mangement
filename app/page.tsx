@@ -51,7 +51,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/login"
-              className="px-8 py-4 bg-black border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
+              className="px-8 py-4 bg-black border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
             >
               Sign In
             </Link>

@@ -131,7 +131,7 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
                       isActive
-                        ? 'bg-purple-100 text-purple-700 font-medium'
+                        ? 'bg-purple-100 text-green-700 font-medium'
                         : 'text-gray-600 hover:bg-gray-100'
                     }`}
                   >
